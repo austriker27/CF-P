@@ -1,2 +1,2 @@
-# CF-P
+# personal-portfolio
 Personal Portfolio project for CF301. 
