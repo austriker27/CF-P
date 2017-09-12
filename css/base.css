@@ -67,3 +67,7 @@
 .topNav li:last-child a {
   border-bottom: none;
 }
+
+.hamburgerMenu ul {
+  display: none;
+}
