@@ -2,10 +2,33 @@
   box-sizing: border-box;
 }
 
-/* Tablet */
-/*@media all and (min-width: 600px) {
+ /*Tablet*/
+@media all and (min-width: 600px) {
+  #hamburgerMenu {
+   display: none;
+ }
 
-}*/
+  .topNav {
+    background-color: black;
+    color: white;
+    display: inline;
+    height: 20px;
+  }
+  .topNav a {
+    display: block;
+    background-color: black;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0px;
+  }
+  .topNav a:hover {
+    background-color: white;
+    color: black;
+  }
+}
 
 /* Laptop */
 @media all and (min-width: 800px) {
