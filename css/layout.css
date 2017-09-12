@@ -9,6 +9,10 @@
 
 /* Laptop */
 @media all and (min-width: 800px) {
+  #hamburgerMenu {
+   display: none;
+ }
+
   .topNav {
     background-color: black;
     color: white;
