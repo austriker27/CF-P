@@ -12,13 +12,37 @@
     display: block;
   }
 
-  #topBannerImg {
-    width: 100%;
-    min-width: 300px;
+  .topNav {
+    background-color: black;
+    color: white;
+    display: inline;
+    height: 20px;
   }
 
-  .footerName {
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
+  .topNav a {
+    display: block;
+    background-color: black;
+    float: left;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0px;
   }
+  
+  .topNav a:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+#topBannerImg {
+  width: 100%;
+  min-width: 300px;
+}
+
+.footerName {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+}

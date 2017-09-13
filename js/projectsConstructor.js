@@ -8,8 +8,6 @@ function Project (name, url, github, img, codebases) {
   this.codebases = codebases;
 }
 
-// TODO: projects to add : stop32, rainier watch, seattle adventure club, corn beans betas, david lindahl photography
-
 var ghostown = new Project('Ghostown', 'http://ghostowngame.com', 'http://github.com/austriker27/ghostowngame', '../imgs/ghostowngame.jpg', 'Javascript, CSS & HTML');
 
 var stop32 = new Project('STOP32 Photography Club', 'http://stop32.org','https://github.com/austriker27/stop32.org', '../imgs/stop32.jpg', 'HTML & CSS');
