@@ -1,17 +1,12 @@
 
+
 .clearFloat {
   float: none;
 }
 
-#topBannerImg {
-  width: 100vh;
-}
-
 #bannerText {
   display: block;
-  color: white;
   font-size: 2em;
-  background-color: black;
 }
 
 .rows h2 {
@@ -31,21 +26,29 @@
   padding: 2% 2% 2% 2%;
 }
 
+.socialMediaBtns a {
+  border-radius: 100px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+
+}
+
 .socialMediaBtns i {
   padding: 2%;
 }
 
-.footerName {
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  text-align: center;
-}
 
 .topNav ul {
   list-style: none;
   background: black;
-  padding: 5px 0;
   width: 100vh;
+  display: none;
+}
+
+#hamburgerMenu:hover ~ ul {
+  display: block;
 }
 
 .topNav li a {
@@ -66,3 +69,11 @@
 .topNav li:last-child a {
   border-bottom: none;
 }
+
+.hamburgerMenu ul {
+  display: none;
+}
+
+/*.template {
+  display: none;
+}*/

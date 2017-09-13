@@ -2,16 +2,15 @@
   box-sizing: border-box;
 }
 
-/* Tablet */
-/*@media all and (min-width: 600px) {
-
-}*/
-
-/* Laptop */
-@media all and (min-width: 800px) {
+/* Laptops and desktops */
+@media all and (min-width: 600px) {
   #hamburgerMenu {
    display: none;
  }
+
+  #hamburgerMenu ~ ul {
+    display: block;
+  }
 
   .topNav {
     background-color: black;
@@ -19,6 +18,7 @@
     display: inline;
     height: 20px;
   }
+
   .topNav a {
     display: block;
     background-color: black;
@@ -29,8 +29,20 @@
     font-size: 1em;
     margin: 0px;
   }
+  
   .topNav a:hover {
     background-color: white;
     color: black;
   }
+}
+
+#topBannerImg {
+  width: 100%;
+  min-width: 300px;
+}
+
+.footerName {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
 }
