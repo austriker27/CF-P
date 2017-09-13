@@ -31,6 +31,6 @@
     "new-cap": "warn",
     "no-redeclare": ["error", { "builtinGlobals": true }],
     "no-unused-vars": "off",
-    "semicolon": [true, "always"]
+    "semi": ["error", "always"]
   }
 }

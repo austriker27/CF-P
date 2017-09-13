@@ -13,20 +13,24 @@ Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h3')
-             .text(this.name);
+             .text(this.title);
   $newProject.find('a')
-             .eq(1).attr('href', 'this.url');
+             .eq(0).attr('href', this.url);
   $newProject.find('a')
-             .eq(2).attr('href','this.githubURL');
+             .eq(1).attr('href',this.githubURL);
   $newProject.find('img')
-             .src('this.img');
+             .attr('src',this.img);
   $newProject.find('p')
-             .eq(1).text('this.skillsUsed');
+             .eq(0).text(this.skillsUsed);
   $('.anchorProjects').append($newProject);
-}
+};
 
 Project.all = [];
 
-Projects.forEach(function(projectsList) {
-  $('.template').append(Project.toHtml())
-}
+projectsList.forEach(function(project) {
+  new Project(project);
+});
+
+Project.all.forEach(function(project) {
+  project.toHtml();
+});
