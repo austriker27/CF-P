@@ -22,13 +22,11 @@ Project.prototype.renderProject = function() {
              .src('this.img');
   $newProject.find('p')
              .eq(1).text('this.skillsUsed');
-
-  $('.template').append($newProject);
-
+  $('.anchorProjects').append($newProject);
 }
 
 Project.all = [];
 
-projects.forEach(function(article) {
+Projects.forEach(function(projectsList) {
   $('.template').append(Project.renderProject())
 }
