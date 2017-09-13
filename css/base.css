@@ -30,6 +30,9 @@
 .socialMediaBtns {
   text-align: center;
   padding: 2% 2% 2% 2%;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
 }
 
 .socialMediaBtns i {
@@ -74,5 +77,9 @@
 }
 
 .hamburgerMenu ul {
+  display: none;
+}
+
+.template {
   display: none;
 }
