@@ -34,32 +34,3 @@ this.prototype.renderProject = function () {
 // TODO: projects to add : stop32, rainier watch, seattle adventure club, corn beans betas, david lindahl photography
 
 var ghostown = new Project('Ghostown', 'http://ghostowngame.com', 'http://github.com/austriker27/ghostowngame', '../imgs/ghostowngame.jpg', 'Javascript, CSS & HTML');
-
-// event listener for hamburger menu and function to toggle hamburger menu on and off
-var hamburgerMenu = document.getElementById('hamburgerMenu');
-hamburgerMenu.addEventListener('click', toggleHamburger);
-
-$('.hamburgerMenu').on('click').css({
-  display: block;
-}
-);
-
-// grab burger menu list items and then make it visible if clicked
-//
-// function toggleHamburger () {
-//   var anchor = document.getElementById('hamburgerMenu');
-//   var navBar = document.createElement('ul');
-//   anchor.appendChild(navBar);
-//
-//   var navBarItem1 = document.createElement('li');
-//   navBarItem1.innerHTML = '<a href="#aboutMe">About Me</a>';
-//   navBar.appendChild(navBarItem1);
-//
-//   var navBarItem2 = document.createElement('li');
-//   navBarItem2.innerHTML = '<a href="#mySkillz">Skillz</a>';
-//   navBar.appendChild(navBarItem2);
-//
-//   var navBarItem3 = document.createElement('li');
-//   navBarItem2.innerHTML = '<a href="#Portfolio">Portfolio</a>';
-//   navBar.appendChild(navBarItem3);
-// }

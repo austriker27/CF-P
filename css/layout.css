@@ -7,10 +7,6 @@
   #hamburgerMenu {
    display: block;
  }
-  #hamburgerMenu:hover ~ ul {
-    display: block;
-  }
- }
 
   .topNav {
     background-color: black;
@@ -39,6 +35,10 @@
   #hamburgerMenu {
    display: block;
  }
+
+  #hamburgerMenu ~ ul {
+    display: block;
+  }
 
   .topNav {
     background-color: black;
