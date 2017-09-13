@@ -33,3 +33,5 @@ Project.prototype.renderProject = function () {
   $newProject.find('p')
              .eq(1).text('this.codebases');
 }
+
+Project.all.push(this);
