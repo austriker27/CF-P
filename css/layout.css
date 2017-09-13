@@ -35,14 +35,3 @@
     color: black;
   }
 }
-
-#topBannerImg {
-  width: 100%;
-  min-width: 300px;
-}
-
-.footerName {
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  text-align: center;
-}

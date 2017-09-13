@@ -9,7 +9,7 @@ function Project (projectsListObj) {
   Project.all.push(this);
 }
 
-Project.prototype.renderProject = function() {
+Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h3')
@@ -28,5 +28,5 @@ Project.prototype.renderProject = function() {
 Project.all = [];
 
 Projects.forEach(function(projectsList) {
-  $('.template').append(Project.renderProject())
+  $('.template').append(Project.toHtml())
 }
