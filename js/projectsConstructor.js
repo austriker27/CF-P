@@ -6,6 +6,8 @@ function Project (name, url, github, img, codebases) {
   this.github = github;
   this.img = img;
   this.codebases = codebases;
+  Project.all.push(this);
+
 }
 
 var ghostown = new Project('Ghostown', 'http://ghostowngame.com', 'http://github.com/austriker27/ghostowngame', '../imgs/ghostowngame.jpg', 'Javascript, CSS & HTML');
@@ -20,7 +22,7 @@ var CornBeansBetas = new Project('Corn, Beans, & Betas', 'http://cornbeansbetas.
 
 var DavidLindahlPhoto = new Project('David Lindahl Photography', 'http://davidlindahlphoto.com','#', '../imgs/davidlindahlphoto.jpg', 'Design, & Photography');
 
-Project.prototype.renderProject = function () {
+Project.prototype.renderProject = function() {
   var $newProject = $('template').clone();
   $newProject.find('h3')
              .text(this.name);
@@ -33,5 +35,3 @@ Project.prototype.renderProject = function () {
   $newProject.find('p')
              .eq(1).text('this.codebases');
 }
-
-Project.all.push(this);
