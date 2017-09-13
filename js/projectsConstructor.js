@@ -28,3 +28,22 @@ Project.prototype.renderProject = function() {
 }
 
 Project.all = [];
+//
+// Project.forEach(function(project) {
+//   $('#newProject').append(project.toHtml());
+// });
+
+// Project.initializeTasks = function(){
+//   projects.forEach(taskObj => new Project(taskObj.name, taskObj.desc, taskObj.img, taskObj.url));
+//   listTask();
+// }
+//
+// function listTask(){
+//   Project.all.forEach(task => task.render());
+// }
+//
+// Project.initializeTasks();
+//
+// $('.hamburger').on('click', function() {
+//   $('.hide').toggle('.nav');
+// });
