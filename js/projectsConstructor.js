@@ -19,7 +19,7 @@ Project.prototype.renderProject = function() {
   $newProject.find('a')
              .eq(2).attr('href','this.githubURL');
   $newProject.find('img')
-             .eq(2).src('this.img');
+             .src('this.img');
   $newProject.find('p')
              .eq(1).text('this.skillsUsed');
 
@@ -28,3 +28,7 @@ Project.prototype.renderProject = function() {
 }
 
 Project.all = [];
+
+projects.forEach(function(article) {
+  $('.template').append(Project.renderProject())
+}
