@@ -47,6 +47,11 @@
   background: black;
   padding: 5px 0;
   width: 100vh;
+  display: none;
+}
+
+#hamburgerMenu:hover ~ ul {
+  display: block;
 }
 
 .topNav li a {

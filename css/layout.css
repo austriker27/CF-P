@@ -5,7 +5,11 @@
  /*Tablet*/
 @media all and (min-width: 600px) {
   #hamburgerMenu {
-   display: none;
+   display: block;
+ }
+  #hamburgerMenu:hover ~ ul {
+    display: block;
+  }
  }
 
   .topNav {
@@ -33,7 +37,7 @@
 /* Laptop */
 @media all and (min-width: 800px) {
   #hamburgerMenu {
-   display: none;
+   display: block;
  }
 
   .topNav {
