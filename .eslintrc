@@ -30,6 +30,7 @@
     "no-trailing-spaces": "warn",
     "new-cap": "warn",
     "no-redeclare": ["error", { "builtinGlobals": true }],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "semicolon": [true, "always"]
   }
 }
