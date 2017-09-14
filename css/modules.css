@@ -1,7 +1,10 @@
 
 #topBannerImg {
-  width: 100%;
-  min-width: 300px;
+  width: 70%;
+  /*min-width: 300px;*/
+  border-radius: 80px;
+  margin: 0 auto;
+  display: block;
 }
 
 .footerName {
@@ -32,4 +35,12 @@
 #Portfolio {
   margin: 1% 0%;
   display: block;
+}
+
+img {
+  width: 100vw;
+}
+
+.template {
+  display: none;
 }

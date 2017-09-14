@@ -13,15 +13,15 @@
   }
 
   .topNav {
-    background-color: black;
-    color: white;
+    background-color: #dfdbe5;
+    color: #dfdbe5;
     display: inline;
     height: 20px;
   }
 
   .topNav a {
     display: block;
-    background-color: black;
+    background-color: #9c92ac;
     float: left;
     text-align: center;
     padding: 14px 16px;
@@ -32,6 +32,6 @@
 
   .topNav a:hover {
     background-color: white;
-    color: black;
+    color: #9c92ac;
   }
 }
