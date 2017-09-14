@@ -21,3 +21,10 @@
 .rows h2 i {
   text-align: center;
 }
+
+.rows i {
+  text-align: center;
+  width: 30%;
+  margin: 0 0 0 0;
+  float: left;
+}
