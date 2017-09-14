@@ -34,6 +34,7 @@
     font-size: 1em;
     margin: 0px;
     border-bottom: none;
+    transition: color 1s;
   }
 
   .topNav li:hover {

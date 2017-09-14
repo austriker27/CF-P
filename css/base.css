@@ -11,6 +11,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   border-radius: 10px;
   padding: 1% 1% 1% 1%;
   line-height: 1.8em;
+  transition: background-color 1s;
+}
+
+.rows p:hover {
+  background-color: black;
 }
 
 .clearFloat {
