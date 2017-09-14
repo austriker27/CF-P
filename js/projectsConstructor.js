@@ -37,18 +37,18 @@ Project.all.forEach(function(project) {
 
 $('#aboutMe').on('click', function(){
   $('html, body').animate({
-    scrollTop: $('#here').position().top
+    scrollTop: $('#bannerText').position().top
   });
 });
 
 $('#mySkills').on('click', function(){
   $('html, body').animate({
-    scrollTop: $('#here').position().top
+    scrollTop: $('#mySkillsSection').position().top
   });
 });
 
 $('#myProjects').on('click', function(){
   $('html, body').animate({
-    scrollTop: $('#here').position().top
+    scrollTop: $('#Portfolio').position().top
   });
 });
