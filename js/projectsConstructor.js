@@ -36,6 +36,8 @@ Project.all.forEach(function(project) {
 });
 
 $('#aboutMe').on('click', function(){
+  $('main').hide();
+  $('main [id|="'+$(this).attr('data-content')+'"]').fadeIn();
   $('html, body').animate({
     scrollTop: $('#bannerText').position().top
   });
