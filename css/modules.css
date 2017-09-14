@@ -39,9 +39,26 @@
 
 img {
   width: 100vw;
-  padding: 10% 10% 10% 10%;
+  padding: 5% 5% 2% 5%;
+  border-radius: 80px;
 }
 
 .template {
   display: none;
+}
+
+.anchorProjects {
+  color: #dfdbe5;
+  background-color: #9c92ac;
+  border-radius: 10px;
+  padding: 1% 1% 1% 1%;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.anchorProjects img {
+  padding: 10% 10% 2% 10%;
+  border-radius: 80px;
+  border-bottom: 1px solid #9c92ac;
+
 }
