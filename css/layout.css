@@ -13,36 +13,33 @@
   }
 
   .topNav {
-    background-color: black;
-    color: white;
+    background-color: #dfdbe5;
+    color: #dfdbe5;
     display: inline;
-    height: 20px;
+    height: 30px;
   }
 
-  .topNav a {
+  .topNav ul {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .topNav li {
     display: block;
-    background-color: black;
+    background-color: #9c92ac;
     float: left;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1em;
     margin: 0px;
+    border-bottom: none;
+    transition: color 1s;
   }
-  
-  .topNav a:hover {
+
+  .topNav li:hover {
     background-color: white;
-    color: black;
+    color: #9c92ac;
+    height: 10vh;
   }
-}
-
-#topBannerImg {
-  width: 100%;
-  min-width: 300px;
-}
-
-.footerName {
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  text-align: center;
 }

@@ -9,22 +9,48 @@ function Project (projectsListObj) {
   Project.all.push(this);
 }
 
-Project.prototype.renderProject = function() {
+Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h3')
-             .text(this.name);
+             .text(this.title);
   $newProject.find('a')
-             .eq(1).attr('href', 'this.url');
+             .eq(0).attr('href', this.url);
   $newProject.find('a')
-             .eq(2).attr('href','this.githubURL');
+             .eq(1).attr('href',this.githubURL);
   $newProject.find('img')
-             .eq(2).src('this.img');
+             .attr('src',this.img);
   $newProject.find('p')
-             .eq(1).text('this.skillsUsed');
-
-  $('.template').append($newProject);
-
-}
+             .eq(0).text(this.skillsUsed);
+  $('.anchorProjects').append($newProject);
+};
 
 Project.all = [];
+
+projectsList.forEach(function(project) {
+  new Project(project);
+});
+
+Project.all.forEach(function(project) {
+  project.toHtml();
+});
+
+$('#aboutMe').on('click', function(){
+  $('main').hide();
+  $('main [id|="'+$(this).attr('data-content')+'"]').fadeIn();
+  $('html, body').animate({
+    scrollTop: $('#bannerText').position().top
+  });
+});
+
+$('#mySkills').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $('#mySkillsSection').position().top
+  });
+});
+
+$('#myProjects').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $('#Portfolio').position().top
+  });
+});

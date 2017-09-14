@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/modules.css">
     <script src="https://use.fontawesome.com/043440fbe3.js"></script>
     <link rel="shortcut icon" href="imgs/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,11 +16,11 @@
   <body id="home">
     <header>
       <nav class="topNav">
-        <i id="hamburgerMenu" class="fa fa-bars" aria-hidden="true"></i>
+        <i id="hamburgerMenu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
         <ul>
-          <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#mySkillz">Skillz</a></li>
-          <li><a href="#Portfolio">Project Portfolio</a></li>
+          <li id="aboutMe" data-content="about">About Me</li>
+          <li id="mySkills" data-content="skills">Skillz</li>
+          <li id="myProjects" data-content="portfolio">Project Portfolio</li>
         </ul>
 
       </nav>
@@ -27,29 +28,31 @@
 
     <div class="clearFloat">
     </div>
+    <main>
+      <img id="topBannerImg" src="imgs/aboutme-2.jpg" alt="">
+      <p id="bannerText">I am David A. <strong>Lindahl</strong>.</p>
 
-    <img id="topBannerImg" src="imgs/top-banner-cropped.jpg" alt="">
-    <p id="bannerText">I am David A. <strong>Lindahl</strong>.</p>
+      <div class="rows">
+        <h2><p>here is a bunch of text about me and why im awesome. economist and super good at learning. buzz words and web dev and other stuff. blah.</p></h2>
 
-    <div class="rows">
-      <h2 id="aboutMe">here is a bunch of text about me and why im awesome. economist and super good at learning. buzz words and web dev and other stuff. blah.</h2>
-
-      <h2 id="mySkills">My Skillzzzz</h2>
-        <i class="fa fa-camera" aria-hidden="true"></i>
-        <i class="fa fa-code" aria-hidden="true"></i>
-        <i class="fa fa-compass" aria-hidden="true"></i>
-
-      <h2 id="Portfolio">My Portfolio</h2>
-      <div class="template">
-        <h3>Project Title</h3>
-        <a href="#">Project Link</a>
-        <a href="#">GitHub link</a>
-        <img src="" alt="">
-        <p>Skills Used</p>
+        <h2 id="mySkillsSection">My Skillzzzz</h2>
+          <i class="fa fa-camera fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-code fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+        <div class="clearFloat"></div>
 
       </div>
-    </div>
-
+        <h2 id="Portfolio">My Portfolio</h2>
+        <div class="anchorProjects">
+          <div class="template">
+            <img src="" alt="">
+            <h3>Project Title</h3>
+            <a href="#">Project Link</a>
+            <a href="#">GitHub link</a>
+            <p>Skills Used</p>
+          </div>
+      </div>
+    </main>
     <footer>
       <div class="socialMediaBtns">
         <a href="http://github.com/austriker27" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>

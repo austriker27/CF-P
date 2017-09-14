@@ -1,0 +1,65 @@
+
+#topBannerImg {
+  width: 70%;
+  max-width: 500px;
+  border-radius: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.footerName {
+  letter-spacing: 0.5vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rows h2 {
+  width: 100%;
+  height: 100px;'
+  margin: 2% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
+  text-align: center;
+}
+
+.rows h2 i {
+  text-align: center;
+}
+
+.rows i {
+  text-align: center;
+  width: 33%;
+  margin: 0 0 0 0;
+  float: left;
+}
+
+#Portfolio {
+  margin: 5% 0%;
+  display: block;
+  text-align: center;
+}
+
+img {
+  width: 100vw;
+  padding: 5% 5% 2% 5%;
+  border-radius: 80px;
+}
+
+.template {
+  display: none;
+}
+
+.anchorProjects {
+  color: #dfdbe5;
+  background-color: #9c92ac;
+  border-radius: 10px;
+  padding: 1% 1% 1% 1%;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.anchorProjects img {
+  padding: 10% 10% 2% 10%;
+  border-radius: 80px;
+  border-bottom: 1px solid #9c92ac;
+
+}
