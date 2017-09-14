@@ -1,14 +1,14 @@
 
 #topBannerImg {
   width: 70%;
-  /*min-width: 300px;*/
+  max-width: 500px;
   border-radius: 80px;
   margin: 0 auto;
   display: block;
 }
 
 .footerName {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.5vw;
   text-transform: uppercase;
   text-align: center;
 }

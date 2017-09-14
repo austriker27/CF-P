@@ -19,7 +19,7 @@
     height: 20px;
   }
 
-  .topNav a {
+  .topNav li {
     display: block;
     background-color: #9c92ac;
     float: left;
@@ -30,7 +30,7 @@
     margin: 0px;
   }
 
-  .topNav a:hover {
+  .topNav li:hover {
     background-color: white;
     color: #9c92ac;
   }

@@ -34,3 +34,21 @@ projectsList.forEach(function(project) {
 Project.all.forEach(function(project) {
   project.toHtml();
 });
+
+$('#aboutMe').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $('#here').position().top
+  });
+});
+
+$('#mySkills').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $('#here').position().top
+  });
+});
+
+$('#myProjects').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $('#here').position().top
+  });
+});
