@@ -1,16 +1,19 @@
 'use strict';
 
+var projects = [];
+
 function Project (projectsListObj) {
   this.title = projectsListObj.title;
   this.url = projectsListObj.url;
   this.githubURL = projectsListObj.githubURL;
   this.img = projectsListObj.img;
   this.skillsUsed = projectsListObj.skillsUsed;
-  Project.all.push(this);
+  // Project.all.push(this);
 }
+// Project.all = [];
 
 Project.prototype.toHtml = function() {
-  var sourceHTML = $('#article-template').html();
+  var sourceHTML = $('#project-template').html();
   var actualTemplate = Handlebars.compile(sourceHTML);
   // var $newProject = $('.template').clone();
   // $newProject.removeClass('template');
@@ -29,15 +32,21 @@ Project.prototype.toHtml = function() {
   $('main').append(newRawHTML);
 };
 
-Project.all = [];
-
-projectsList.forEach(function(project) {
-  new Project(project);
+projectsList.forEach(function(projectObject) {
+  projects.push(new Project(projectObject));
 });
+// 
+// projectsList.forEach(function(project){
+//   $('.projects').append(project.toHtml());
+// });
 
-Project.all.forEach(function(project) {
-  project.toHtml();
-});
+// projectsList.forEach(function(project) {
+//   new Project(project);
+// });
+//
+// Project.all.forEach(function(project) {
+//   project.toHtml();
+// });
 // this code makes you scroll to the top of section
 // $('#aboutMe').on('click', function(){
 //   $('main').hide();
@@ -59,16 +68,16 @@ Project.all.forEach(function(project) {
 //   });
 // });
 
-Project.all.makeSectionsAppear = function() {
-  $('.topNav').on('click', '.navTab', function() {
-    $('.sectionContent').hide();
-    $('#' + $(this).data('content')).fadeIn();
-  });
-
-  $('.topNav .navTab:first').click();
-};
-
-
-$(document).ready(function() {
-  Project.all.makeSectionsAppear();
-});
+// Project.makeSectionsAppear = function() {
+//   $('.topNav').on('click', '.navTab', function() {
+//     $('.sectionContent').hide();
+//     $('#' + $(this).data('sectionContent')).fadeIn();
+//   });
+//
+//   $('.topNav .navTab:first').click();
+// };
+//
+//
+// $(document).ready(function() {
+//   Project.makeSectionsAppear();
+// });
