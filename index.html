@@ -12,15 +12,26 @@
     <script src="https://use.fontawesome.com/043440fbe3.js"></script>
     <link rel="shortcut icon" href="imgs/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script id = "article-template" type = "text/x-handlebars-template">
+      <section class="sectionContent">
+        <article class= "projects" data-category= "{{ project }}">
+        <h3 class = "title">{{ title }}</h1>
+        <a href="{{url}}"> {{ title }} </a>
+        <a href="{{githubURL}}"> Github Link </a>
+        <p>{{ skillsUsed }}</p>
+        </article>
+      </section>
+    </script>
   </head>
   <body id="home">
     <header>
       <nav class="topNav">
         <i id="hamburgerMenu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
         <ul>
-          <li id="aboutMe" data-content="about">About Me</li>
-          <li id="mySkills" data-content="skills">Skillz</li>
-          <li id="myProjects" data-content="portfolio">Project Portfolio</li>
+          <li class="navTab" id="home" data-content="home">Home</li>
+          <li class="navTab" id="aboutMe" data-content="about">About Me</li>
+          <li class="navTab" id="mySkills" data-content="skills">Skillz</li>
+          <li class="navTab" id="myProjects" data-content="portfolio">Project Portfolio</li>
         </ul>
 
       </nav>
@@ -32,9 +43,11 @@
       <img id="topBannerImg" src="imgs/aboutme-2.jpg" alt="">
       <p id="bannerText">I am David A. <strong>Lindahl</strong>.</p>
 
+      <section class="sectionContent">
       <div class="rows">
         <h2><p>here is a bunch of text about me and why im awesome. economist and super good at learning. buzz words and web dev and other stuff. blah.</p></h2>
-
+      </section>
+      <section class="sectionContent">
         <h2 id="mySkillsSection">My Skillzzzz</h2>
           <i class="fa fa-camera fa-3x" aria-hidden="true"></i>
           <i class="fa fa-code fa-3x" aria-hidden="true"></i>
@@ -42,8 +55,9 @@
         <div class="clearFloat"></div>
 
       </div>
-        <h2 id="Portfolio">My Portfolio</h2>
-        <div class="anchorProjects">
+      </section>
+        <!-- <h2 id="Portfolio">My Portfolio</h2> -->
+        <!-- <div class="anchorProjects">
           <div class="template">
             <img src="" alt="">
             <h3>Project Title</h3>
@@ -51,7 +65,7 @@
             <a href="#">GitHub link</a>
             <p>Skills Used</p>
           </div>
-      </div>
+        </div> -->
     </main>
     <footer>
       <div class="socialMediaBtns">
@@ -67,6 +81,7 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
   <script src="js/projects.js" type="text/javascript"></script>
   <script src="js/projectsConstructor.js" type="text/javascript"></script>
 </html>
