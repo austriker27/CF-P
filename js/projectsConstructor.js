@@ -15,19 +15,6 @@ function Project (projectsListObj) {
 Project.prototype.toHtml = function() {
   var sourceHTML = $('#project-template').html();
   var actualTemplate = Handlebars.compile(sourceHTML);
-  // var $newProject = $('.template').clone();
-  // $newProject.removeClass('template');
-  // $newProject.find('h3')
-  //            .text(this.title);
-  // $newProject.find('a')
-  //            .eq(0).attr('href', this.url);
-  // $newProject.find('a')
-  //            .eq(1).attr('href',this.githubURL);
-  // $newProject.find('img')
-  //            .attr('src',this.img);
-  // $newProject.find('p')
-  //            .eq(0).text(this.skillsUsed);
-  // $('.anchorProjects').append($newProject);
   var newRawHTML = actualTemplate(this);
   $('main').append(newRawHTML);
 };
@@ -35,19 +22,12 @@ Project.prototype.toHtml = function() {
 projectsList.forEach(function(projectObject) {
   projects.push(new Project(projectObject));
 });
-// 
-// projectsList.forEach(function(project){
-//   $('.projects').append(project.toHtml());
-// });
 
-// projectsList.forEach(function(project) {
-//   new Project(project);
-// });
-//
-// Project.all.forEach(function(project) {
-//   project.toHtml();
-// });
-// this code makes you scroll to the top of section
+projects.forEach(function(project){
+  $('.projects').append(project.toHtml());
+});
+
+// // this code makes you scroll to the top of section
 // $('#aboutMe').on('click', function(){
 //   $('main').hide();
 //   $('main [id|="'+$(this).attr('data-content')+'"]').fadeIn();
@@ -67,14 +47,15 @@ projectsList.forEach(function(projectObject) {
 //     scrollTop: $('#Portfolio').position().top
 //   });
 // });
-
+//
 // Project.makeSectionsAppear = function() {
 //   $('.topNav').on('click', '.navTab', function() {
 //     $('.sectionContent').hide();
-//     $('#' + $(this).data('sectionContent')).fadeIn();
+//     $('#'+$(this).attr('data-content')+' ' ).fadeIn();
+//     console.log($('#'+$(this).attr('data-content' + ' ' )));
 //   });
 //
-//   $('.topNav .navTab:first').click();
+//   // $('.topNav .navTab:first').click();
 // };
 //
 //
