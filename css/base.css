@@ -18,6 +18,26 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-color: black;
 }
 
+.mySkillsSection {
+  margin: 2% 0 2% 0;
+}
+
+.mySkillsSection i {
+  width: 33%;
+  margin: 0 auto;
+  transition: background-color 1s;
+}
+
+.skillsIcons {
+  margin: 0 auto;
+  width: 30%;
+  transition: color 1s;
+}
+
+.skillsIcons:hover {
+  color: black;
+}
+
 .clearFloat {
   float: none;
 }
@@ -25,6 +45,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 #bannerText {
   display: block;
   font-size: 2em;
+  margin-left: 5vw;
 }
 
 .socialMediaBtns {
@@ -83,4 +104,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .hamburgerMenu ul {
   display: none;
+}
+
+.sectionContent {
+  text-align: center;
 }
