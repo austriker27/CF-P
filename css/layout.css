@@ -13,8 +13,8 @@
   }
 
   .topNav {
-    background-color: #dfdbe5;
-    color: #dfdbe5;
+    background-color: #dbe5de;
+    color: #dbe5de;
     display: inline;
     height: 30px;
   }
@@ -26,7 +26,7 @@
 
   .topNav li {
     display: block;
-    background-color: #9c92ac;
+    background-color: #92ac9c;
     float: left;
     text-align: center;
     padding: 14px 16px;
@@ -39,7 +39,7 @@
 
   .topNav li:hover {
     background-color: white;
-    color: #9c92ac;
+    color: #92ac9c;
     height: 10vh;
   }
 }

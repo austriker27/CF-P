@@ -2,7 +2,7 @@
 // this code makes you scroll to the top of section
 $('#aboutMe').on('click', function(){
   $('main').hide();
-  $('main [id|="'+$(this).attr('data-content')+'"]').fadeIn();
+  $('main [class="'+$(this).attr('data-content')+'"]').fadeIn();
   $('html, body').animate({
     scrollTop: $('#bannerText').position().top
   });
