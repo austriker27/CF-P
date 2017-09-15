@@ -53,7 +53,7 @@ Project.makeSectionsAppear = function() {
     console.log($('#'+$(this).attr('data-content' + ' ' )));
   });
 
-  $('.topNav .navTab:first').click();
+  // $('.topNav .navTab:first').click();
 };
 
 
