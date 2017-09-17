@@ -26,7 +26,7 @@ Project.makeSectionsAppear = function() {
     $('#' + $(this).attr('data-content')).fadeIn();
   });
 
-  // $('.topNav .navTab:first').click();
+  $('.topNav .navTab:first').click();
 };
 
 
