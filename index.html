@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://use.fontawesome.com/043440fbe3.js"></script>
     <link rel="shortcut icon" href="imgs/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script id ="project-template" type="text/x-handlebars-template">
       <section class="sectionContent">
         <article class= "project" data-category= "{{ project }}">
         <img src=" {{ img }}" alt="">
-        <h3 class = "title">{{ title }}</h1>
+        <h3 class = "title">{{ title }}</h3>
         <a href="{{ url }}"> {{ title }} </a>
         <a href="{{ githubURL }}"> Github Link </a>
         <p>{{ skillsUsed }}</p>
@@ -37,28 +42,29 @@
       </nav>
     </header>
 
-    <div class="clearFloat">
-    </div>
+    <div class="clearFloat"></div>
     <main>
       <img id="topBannerImg" src="imgs/aboutme-2.jpg" alt="">
       <p id="bannerText">I am David A. <strong>Lindahl</strong>.</p>
 
       <section class="sectionContent">
         <div class="rows">
-          <h2 class="about"> About Me
-            <p>here is a bunch of text about me and why im awesome. economist and super good at learning. buzz words and web dev and other stuff. blah.</p></h2>
-        </section>
-        <section class="sectionContent">
-          <h2 class="mySkillsSection">My Skillzzzz</h2>
-            <i class="fa fa-camera fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-code fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-          <div class="clearFloat"></div>
+          <h2 class="about">About Me</h2>
+            <p>An Anti-Money Laundering Investigator by day, an economist by training, a photographer by night and now a code monkey by day and night, some say David is as versatile as a Swiss Army Knife. David would disagree and explain that's impossible, he is Scottish. A diehard footy fan and avid yet mediocre outdoorsman, you can find him on the weekends either cheering on Liverpool FC or adventuring in the mountains with his camera in tow.
+            </p>
+      </section>
 
+        <section class="sectionContent">
+          <h2 class="mySkillsSection">Interests</h2>
+            <i class="fa fa-camera fa-3x skillsIcons" aria-hidden="true"></i>
+            <i class="fa fa-code fa-3x skillsIcons" aria-hidden="true"></i>
+            <i class="fa fa-compass fa-3x skillsIcons" aria-hidden="true"></i>
+          <div class="clearFloat"></div>
         </div>
+
         </section>
-        <div class="projectsAnchor">
-        </div>
+        <h2 class="projectsAnchor sectionContent"> My Projects
+        </h2>
       </main>
     <footer>
       <div class="socialMediaBtns">
@@ -74,8 +80,8 @@
       </div>
     </footer>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="data/projects.js" type="text/javascript"></script>
+  <script src="js/projectView.js" type="text/javascript"></script>
   <script src="js/projects.js" type="text/javascript"></script>
   <script src="js/projectsConstructor.js" type="text/javascript"></script>
 </html>
