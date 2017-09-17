@@ -14,7 +14,7 @@ Project.prototype.toHtml = function() {
   var sourceHTML = $('#project-template').html();
   var actualTemplate = Handlebars.compile(sourceHTML);
   var newRawHTML = actualTemplate(this);
-  $('main').append(newRawHTML);
+  return newRawHTML;
 };
 
 projectsList.forEach(function(projectObject) {
@@ -22,5 +22,6 @@ projectsList.forEach(function(projectObject) {
 });
 
 projects.forEach(function(project){
+  Project.prototype.toHtml();
   $('.projectsAnchor').append(project.toHtml());
 });

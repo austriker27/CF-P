@@ -17,11 +17,11 @@
     color: #dbe5de;
     display: inline;
     height: 30px;
+    width: 100vw;
   }
 
   .topNav ul {
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
   }
 
   .topNav li {
@@ -29,7 +29,7 @@
     background-color: #92ac9c;
     float: left;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1% 5% 1% 1%;
     text-decoration: none;
     font-size: 1em;
     margin: 0px;
@@ -40,6 +40,5 @@
   .topNav li:hover {
     background-color: white;
     color: #92ac9c;
-    height: 10vh;
   }
 }
