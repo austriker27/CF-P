@@ -115,3 +115,7 @@ h2 {
 .sectionContent {
   text-align: center;
 }
+
+.hide {
+  display: none;
+}
