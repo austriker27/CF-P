@@ -23,5 +23,12 @@ projectsList.forEach(function(projectObject) {
 
 projects.forEach(function(project){
   Project.prototype.toHtml();
+  console.log('hi');
   $('.projectsAnchor').append(project.toHtml());
+});
+
+$('#hamburgerMenu').on('click', function(event) {
+  event.preventDefault();
+  $('.navTab').toggle('fast');
+  console.log($('.navTab'));
 });
