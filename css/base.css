@@ -3,6 +3,12 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+#hamburgerMenu {
+  width: 100vw;
+  background-color: #92ac9c;
+  color: #dbe5de;
+}
+
 p {
   font-size: 1.2em;
 }
@@ -11,6 +17,11 @@ h2 {
   font-family: 'Rubik', sans-serif;
   font-size: 1.5em;
 }
+
+h3 {
+  font-size: 1.3em;
+}
+
 .rows p {
   color: #dbe5de;
   background-color: #92ac9c;
@@ -81,13 +92,6 @@ h2 {
 .topNav ul {
   list-style: none;
   background: #92ac9c;
-  width: 100vh;
-  display: none;
-}
-
-#hamburgerMenu:hover ~ ul {
-  display: block;
-  width: 100vw;
 }
 
 .topNav li {
@@ -114,4 +118,8 @@ h2 {
 
 .sectionContent {
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
