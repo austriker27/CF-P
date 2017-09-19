@@ -23,7 +23,6 @@ projectsList.forEach(function(projectObject) {
 
 projects.forEach(function(project){
   Project.prototype.toHtml();
-  console.log('hi');
   $('.projectsAnchor').append(project.toHtml());
 });
 
