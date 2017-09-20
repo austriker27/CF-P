@@ -45,7 +45,7 @@ projectsList.fetchAll = function() {
       Project.loadAll(response);
       projects.initIndexPage();
     };
-    $.get('/data/hackerIpsum.json', cacheAndLoadData);
+    $.get('/data/projects.json', cacheAndLoadData);
 
   }
 };
