@@ -25,7 +25,6 @@ Project.loadAll = function (projectsList) {
 
 Project.initIndexPage = function() {
   projects.forEach(function(project){
-    // Project.prototype.toHtml();
     $('.projectsAnchor').append(project.toHtml());
   });
 };
@@ -40,14 +39,10 @@ Project.fetchAll = function() {
     Project.loadAll(JSON.parse(localStorage.projectsList));
     Project.initIndexPage();
   } else {
-    // let cacheAndLoadData = function(response) {
     $.get('/data/projects.json', function(response) {
-      console.log(response);
       localStorage.setItem('projectsList', JSON.stringify(response));
       Project.loadAll(response);
       Project.initIndexPage();
-    }).fail(console.error).done(function() {
-      console.log('donezo');
     });
   }
 
