@@ -17,18 +17,35 @@ Project.prototype.toHtml = function() {
   return newRawHTML;
 };
 
-projectsList.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-});
+Project.loadAll = function (projectsList) {
+  projectsList.forEach(function(projectObject) {
+    projects.push(new Project(projectObject));
+  });
+};
 
-projects.forEach(function(project){
-  Project.prototype.toHtml();
-  console.log('hi');
-  $('.projectsAnchor').append(project.toHtml());
-});
+Project.initIndexPage = function() {
+  projects.forEach(function(project){
+    Project.prototype.toHtml();
+    $('.projectsAnchor').append(project.toHtml());
+  });
+};
 
 $('#hamburgerMenu').on('click', function(event) {
   event.preventDefault();
   $('.navTab').toggle('fast');
-  console.log($('.navTab'));
 });
+
+Project.fetchAll = function() {
+  if (localStorage.projectsList) {
+    Project.loadAll(JSON.parse(localStorage.projectsList));
+    projects.initIndexPage();
+  } else {
+    let cacheAndLoadData = function(response) {
+      localStorage.setItem("projectsList", JSON.stringify(response));
+      Project.loadAll(response);
+      projects.initIndexPage();
+    };
+    $.get('/data/projects.json', cacheAndLoadData);
+
+  }
+};
