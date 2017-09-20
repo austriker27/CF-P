@@ -14,3 +14,8 @@ APP.get('/', function(request, response) {
 APP.get('*', function(request, response) {
   response.sendFile('404.html', {root: './public'});
 });
+
+APP.listen(PORT, function(){
+  console.log(PORT);
+}
+);

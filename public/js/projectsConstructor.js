@@ -25,7 +25,7 @@ Project.loadAll = function (projectsList) {
 
 Project.initIndexPage = function() {
   projects.forEach(function(project){
-    Project.prototype.toHtml();
+    // Project.prototype.toHtml();
     $('.projectsAnchor').append(project.toHtml());
   });
 };
@@ -38,14 +38,17 @@ $('#hamburgerMenu').on('click', function(event) {
 Project.fetchAll = function() {
   if (localStorage.projectsList) {
     Project.loadAll(JSON.parse(localStorage.projectsList));
-    projects.initIndexPage();
+    Project.initIndexPage();
   } else {
-    let cacheAndLoadData = function(response) {
-      localStorage.setItem("projectsList", JSON.stringify(response));
+    // let cacheAndLoadData = function(response) {
+    $.get('/data/projects.json', function(response) {
+      console.log(response);
+      localStorage.setItem('projectsList', JSON.stringify(response));
       Project.loadAll(response);
-      projects.initIndexPage();
-    };
-    $.get('/data/projects.json', cacheAndLoadData);
-
+      Project.initIndexPage();
+    }).fail(console.error).done(function() {
+      console.log('donezo');
+    });
   }
+
 };
