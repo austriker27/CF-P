@@ -11,17 +11,19 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Postgres
+PSQL
+express
 ```
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+Run the following command to install dependencies on your machine:
 
 ```
-Give the example
+npm i
 ```
 
 And repeat
