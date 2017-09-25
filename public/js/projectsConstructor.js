@@ -17,23 +17,11 @@ Project.prototype.toHtml = function() {
   return newRawHTML;
 };
 
-// Project.loadAll = function (projectsList) {
-//   projectsList.forEach(function(projectObject) {
-//     projects.push(new Project(projectObject));
-//   });
-// }; refactored below, leaving OG code commented out in case new stuff is broken: 
-
 Project.loadAll = function (projectsList) {
   projectsList.forEach((projectObject) => {
     projects.push(new Project(projectObject));
   });
 };
-
-// Project.initIndexPage = function() {
-//   projects.forEach(function(project){
-//     $('.projectsAnchor').append(project.toHtml());
-//   });
-// };
 
 Project.initIndexPage = function() {
   projects.forEach((project) => {
