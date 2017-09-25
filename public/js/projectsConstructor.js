@@ -17,14 +17,26 @@ Project.prototype.toHtml = function() {
   return newRawHTML;
 };
 
+// Project.loadAll = function (projectsList) {
+//   projectsList.forEach(function(projectObject) {
+//     projects.push(new Project(projectObject));
+//   });
+// }; refactored below, leaving OG code commented out in case new stuff is broken: 
+
 Project.loadAll = function (projectsList) {
-  projectsList.forEach(function(projectObject) {
+  projectsList.forEach((projectObject) => {
     projects.push(new Project(projectObject));
   });
 };
 
+// Project.initIndexPage = function() {
+//   projects.forEach(function(project){
+//     $('.projectsAnchor').append(project.toHtml());
+//   });
+// };
+
 Project.initIndexPage = function() {
-  projects.forEach(function(project){
+  projects.forEach((project) => {
     $('.projectsAnchor').append(project.toHtml());
   });
 };
@@ -39,11 +51,11 @@ Project.fetchAll = function() {
     Project.loadAll(JSON.parse(localStorage.projectsList));
     Project.initIndexPage();
   } else {
-    $.get('/data/projects.json', function(response) {
+    $.get('/data/projects.json', ((response) => {
       localStorage.setItem('projectsList', JSON.stringify(response));
       Project.loadAll(response);
       Project.initIndexPage();
-    });
+    })
+    );
   }
-
 };
