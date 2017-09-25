@@ -1,5 +1,7 @@
 'use strict';
 
+var app = app || {};
+
 var projects = [];
 
 (function(module) {
