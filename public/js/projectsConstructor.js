@@ -36,7 +36,7 @@ var projects = [];
       Project.loadAll(JSON.parse(localStorage.projectsList));
       Project.initIndexPage();
     } else {
-      $.get('/data/projects.json', ((response) => {
+      $.get('/data/projects.json', (response => {
         localStorage.setItem('projectsList', JSON.stringify(response));
         Project.loadAll(response);
         Project.initIndexPage();
