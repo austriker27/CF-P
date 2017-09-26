@@ -1,24 +1,22 @@
 'use strict';
 var app = app || {};
 
-page('/', () => {
-  $('.tab-content').hide();
-  // $('#articles').fadeIn();
-});
+page('/', () => { /index });
+
 page('/about', () => {
-  $('.tab-content').hide();
+  $('.data-content').hide();
   $('#about').fadeIn();
 });
 page('/interests', () => {
-  $('.tab-content').hide();
+  $('.data-content').hide();
   $('#interests').fadeIn();
 });
 page('/projects', () => {
-  $('.tab-content').hide();
+  $('.data-content').hide();
   $('#projects').fadeIn();
 });
 page('*', () => {
-  $('.tab-content').hide();
+  $('.data-content').hide();
   $('#projects').fadeIn();
 });
 

@@ -24,7 +24,7 @@
     width: 100vw;
   }
 
-  .topNav li {
+  .topNav li a {
     display: block;
     background-color: #92ac9c;
     float: left;
@@ -38,7 +38,7 @@
     width: 25%;
   }
 
-  .topNav li:hover {
+  .topNav li a:hover {
     background-color: white;
     color: #92ac9c;
   }
