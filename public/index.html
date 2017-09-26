@@ -33,10 +33,11 @@
       <nav class="topNav">
         <i id="hamburgerMenu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
         <ul>
-          <li class="navTab" id="home" data-content="home">Home</li>
-          <li class="navTab" id="aboutMe" data-content="about">About Me</li>
-          <li class="navTab" id="mySkills" data-content="mySkillsSection">Interests</li>
-          <li class="navTab" id="myProjects" data-content="portfolio">Portfolio</li>
+          <a href="#"></a>
+          <li class="navTab" id="home" data-content="home"><a href="/">Home</a></li>
+          <li class="navTab" id="aboutMe" data-content="about"><a href="/about">About Me</a></li>
+          <li class="navTab" id="mySkills" data-content="mySkillsSection"><a href="/interests">Interests</a></li>
+          <li class="navTab" id="myProjects" data-content="portfolio"><a href="/portfolio">Portfolio</a></li>
         </ul>
       </nav>
     </header>
@@ -84,6 +85,7 @@
   <script src="data/projects.js" type="text/javascript"></script>
   <script src="js/projectsConstructor.js" type="text/javascript"></script>
   <script src="js/projectView.js" type="text/javascript"></script>
+  <script src="js/routes.js" type="text/javascript"></script>
   <script>
       app.Project.fetchAll();
     </script>
