@@ -1,5 +1,9 @@
+'use strict';
 
-Project.makeSectionsAppear = function() {
+var app = app || {};
+
+
+app.makeSectionsAppear = function() {
   $('.topNav').on('click', '.navTab', function(event) {
     event.preventDefault();
     $('.sectionContent').hide();
@@ -11,5 +15,11 @@ Project.makeSectionsAppear = function() {
 
 
 $(document).ready(function() {
-  Project.makeSectionsAppear();
+  app.makeSectionsAppear();
+});
+
+
+$('#hamburgerMenu').on('click', function(event) {
+  event.preventDefault();
+  $('.navTab').toggle('fast');
 });
