@@ -31,11 +31,6 @@ var projects = [];
     );
   };
 
-  $('#hamburgerMenu').on('click', function(event) {
-    event.preventDefault();
-    $('.navTab').toggle('fast');
-  });
-
   Project.fetchAll = function() {
     if (localStorage.projectsList) {
       Project.loadAll(JSON.parse(localStorage.projectsList));

@@ -17,3 +17,9 @@ app.makeSectionsAppear = function() {
 $(document).ready(function() {
   app.makeSectionsAppear();
 });
+
+
+$('#hamburgerMenu').on('click', function(event) {
+  event.preventDefault();
+  $('.navTab').toggle('fast');
+});
