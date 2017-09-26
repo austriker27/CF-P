@@ -20,25 +20,11 @@ var projects = [];
     return newRawHTML;
   };
 
-  // Project.loadAll = function (projectsList) {
-  //   projectsList.forEach((projectObject) => {
-  //     projects.push(new Project(projectObject));
-  //   });
-  // };
-
   Project.loadAll = function (projectsList) {
     projectsList.map ((projectObject) => {
       projects.push(new Project(projectObject));
     });
   };
-
-  // instead of using forEach we need to write a .map
-
-  // Project.initIndexPage = function() {
-  //   projects.forEach((project) => {
-  //     $('.projectsAnchor').append(project.toHtml());
-  //   });
-  // };
 
   Project.initIndexPage = function() {
     projects.map( project => $('.projectsAnchor').append(project.toHtml())
