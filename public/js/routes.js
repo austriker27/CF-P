@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-page('/', () => { /index });
+page('/', app.Project.initIndexPage );
 
 page('/about', () => {
   $('.data-content').hide();
@@ -12,10 +12,6 @@ page('/interests', () => {
   $('#interests').fadeIn();
 });
 page('/projects', () => {
-  $('.data-content').hide();
-  $('#projects').fadeIn();
-});
-page('*', () => {
   $('.data-content').hide();
   $('#projects').fadeIn();
 });

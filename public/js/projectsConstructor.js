@@ -22,10 +22,10 @@ app.Project(projects) = [];
   };
 
   Project.loadAll = function (projectsList) {
-    projectsList.map ((projectObject) => {
-      projects.push(new Project(projectObject));
-    });
-  };
+  projectsList.forEach(function(projectObject) {
+    projects.push(new Project(projectObject));
+  });
+};
 
   Project.initIndexPage = function() {
   projects.forEach(function(project){
