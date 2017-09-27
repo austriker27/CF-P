@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-var projects = [];
+app.Project(projects = []);
 
 (function(module) {
   function Project (projectsListObj) {
@@ -27,8 +27,9 @@ var projects = [];
   };
 
   Project.initIndexPage = function() {
-    projects.map( project => $('.projectsAnchor').append(project.toHtml())
-    );
+  projects.forEach(function(project){
+      $('.projectsAnchor').append(project.toHtml());
+    });
   };
 
   Project.fetchAll = function() {
