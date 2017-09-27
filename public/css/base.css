@@ -94,7 +94,7 @@ h3 {
   background: #92ac9c;
 }
 
-.topNav li {
+.topNav li a {
   display: block;
   padding: 0 20px;
   color: #dbe5de;

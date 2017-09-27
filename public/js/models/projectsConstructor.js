@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-var projects = [];
+// var projects = [];
 
 (function(module) {
   function Project (projectsListObj) {
@@ -13,6 +13,8 @@ var projects = [];
     this.skillsUsed = projectsListObj.skillsUsed;
   }
 
+  Project.projects = [];
+
   Project.prototype.toHtml = function() {
     var sourceHTML = $('#project-template').html();
     var actualTemplate = Handlebars.compile(sourceHTML);
@@ -20,15 +22,16 @@ var projects = [];
     return newRawHTML;
   };
 
-  Project.loadAll = function (projectsList) {
-    projectsList.map ((projectObject) => {
-      projects.push(new Project(projectObject));
-    });
+  Project.loadAll = rows => {
+    Project.projects = projectsList.map((projectObject) => new Project(projectObject));
   };
 
+
+
   Project.initIndexPage = function() {
-    projects.map( project => $('.projectsAnchor').append(project.toHtml())
-    );
+  projects.forEach(function(project){
+      $('.projectsAnchor').append(project.toHtml());
+    });
   };
 
   Project.fetchAll = function() {
