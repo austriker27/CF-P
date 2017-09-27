@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.Project(projects = []);
+app.Project(projects) = [];
 
 (function(module) {
   function Project (projectsListObj) {
@@ -12,6 +12,7 @@ app.Project(projects = []);
     this.img = projectsListObj.img;
     this.skillsUsed = projectsListObj.skillsUsed;
   }
+
 
   Project.prototype.toHtml = function() {
     var sourceHTML = $('#project-template').html();
