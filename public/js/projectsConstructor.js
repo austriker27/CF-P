@@ -21,11 +21,8 @@ app.Project(projects) = [];
     return newRawHTML;
   };
 
-  Project.loadAll = function (projectsList) {
-  projectsList.forEach(function(projectObject) {
-    projects.push(new Project(projectObject));
-  });
-};
+  projects = projectsList.map((projectObject) => new Project(projectObject));
+
 
   Project.initIndexPage = function() {
   projects.forEach(function(project){
