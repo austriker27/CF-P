@@ -31,7 +31,3 @@ function proxyGitHub(req, res, next){
     }
   }))(req, res);
 }
-
-APP.get('*', (request, response) => {
-  response.sendFile('index.html', { root: './public'});
-});

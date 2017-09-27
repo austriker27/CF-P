@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.Project(projects) = [];
+// var projects = [];
 
 (function(module) {
   function Project (projectsListObj) {
@@ -13,6 +13,7 @@ app.Project(projects) = [];
     this.skillsUsed = projectsListObj.skillsUsed;
   }
 
+  Project.projects = [];
 
   Project.prototype.toHtml = function() {
     var sourceHTML = $('#project-template').html();
@@ -21,7 +22,10 @@ app.Project(projects) = [];
     return newRawHTML;
   };
 
-  projects = projectsList.map((projectObject) => new Project(projectObject));
+  Project.loadAll = rows => {
+    Project.projects = projectsList.map((projectObject) => new Project(projectObject));
+  };
+
 
 
   Project.initIndexPage = function() {
