@@ -26,8 +26,6 @@ var app = app || {};
     Project.projects = projectsList.map((projectObject) => new Project(projectObject));
   };
 
-
-
   Project.initIndexPage = function() {
   projects.forEach(function(project){
       $('.projectsAnchor').append(project.toHtml());
