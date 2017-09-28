@@ -8,19 +8,22 @@ page('/', () => {
 });
 
 page('/about', () => {
-  $('#interests').hide();
+  app.repos.renderRepos();
+  $('#mySkillsSection').hide();
   $('#portfolio').hide();
   $('#about').fadeIn();
 });
 
 page('/interests', () => {
-  $('main').hide();
-  $('#interests').fadeIn();
+  $('#about').hide();
+  $('#portfolio').hide();
+  $('#mySkillsSection').fadeIn();
 });
 
 page('/portfolio', () => {
-  $('main').hide();
-  $('#projects').fadeIn();
+  $('#about').hide();
+  $('#mySkillsSection').hide();
+  $('#portfolio').fadeIn();
 });
 
 page();

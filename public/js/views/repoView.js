@@ -1,26 +1,13 @@
 'use strict';
+
 var app = app || {};
 
 (function(module) {
-  const repoView = {};
+  repos.renderRepos = function() {
+    var sourceHTML = $('#repo-template').html();
+    var actualTemplate = Handlebars.compile(sourceHTML);
+    var newReps = actualTemplate(this);
+    return newReps;
 
-  const ui = function() {
-    let $about = $('#about');
-
-    $about.find('ul').empty();
-    $about.show().siblings().hide();
-  };
-
-  let render = Handlebars.compile($('#repo-template').html());
-
-  repoView.index = function() {
-    ui();
-    console.log('repoview');
-
-    $('#about ul').append(
-      app.repos.with('name').map(render)
-    );
-  };
-
-  module.repoView = repoView;
-})(app);
+  module.Repos = Repos;
+}(app));
