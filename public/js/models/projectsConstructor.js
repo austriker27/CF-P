@@ -23,7 +23,7 @@ var app = app || {};
   };
 
   Project.loadAll = rows => {
-    Project.projects = projectsList.map((projectObject) => new Project(projectObject));
+    Project.projects = Project.projects.map((projectObject) => new Project(projectObject));
   };
 
   Project.initIndexPage = function() {
