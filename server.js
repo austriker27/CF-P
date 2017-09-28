@@ -24,11 +24,12 @@ APP.get('/portfolio', function(request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
+APP.get('/github/*', proxyGitHub);
+
 APP.get('*', function(request, response) {
   response.sendFile('404.html', {root: './public'});
 });
 
-APP.get('/github/*', proxyGitHub);
 
 APP.listen(PORT, function(){
   console.log(PORT);

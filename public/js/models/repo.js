@@ -12,10 +12,17 @@ var app = app || {};
       return repos.all = response;
     }
     )
-      .then(callback,
-        err => console.error(err.status, err.statusText, 'is the broke stuff. Good luck fixing it.'));
+      .then(callback);
   };
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
+
+  repos.renderRepos = function() {
+    let sourceHTML = $('#repo-template').html();
+    let actualTemplate = Handlebars.compile(sourceHTML);
+    console.log(repos.all);
+    $('#about').append(repos.all.with('name').map(actualTemplate));
+  };
+
   module.repos = repos;
 })(app);
