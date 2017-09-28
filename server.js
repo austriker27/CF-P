@@ -16,12 +16,13 @@ APP.get('*', function(request, response) {
   response.sendFile('404.html', {root: './public'});
 });
 
+APP.get('/github/*', proxyGitHub);
+
 APP.listen(PORT, function(){
   console.log(PORT);
 }
 );
 
-APP.get('/github/*', proxyGitHub);
 
 function proxyGitHub(req, res, next){
   (requestProxy({
