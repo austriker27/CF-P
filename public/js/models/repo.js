@@ -7,15 +7,14 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.get('/github/user/repos',function (response) {
-      repos.all = response.map(function(repo) {
-        return repo;
-      }
-      );
-    })
+    $.get('/github/user/repos', function (response) {
+      return repos.all = response;
+    }
+    )
       .then(callback,
         err => console.error(err.status, err.statusText, 'is the broke stuff. Good luck fixing it.'));
   };
+
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;

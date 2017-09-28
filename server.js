@@ -12,6 +12,18 @@ APP.get('/', function(request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
+APP.get('/about', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
+APP.get('/interests', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
+APP.get('/portfolio', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
 APP.get('*', function(request, response) {
   response.sendFile('404.html', {root: './public'});
 });
