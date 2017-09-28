@@ -8,13 +8,13 @@ var app = app || {};
 
   repos.requestRepos = function(callback) {
     $.get('/github/user/repos', function (response) {
+      console.log(response);
       return repos.all = response;
     }
     )
       .then(callback,
         err => console.error(err.status, err.statusText, 'is the broke stuff. Good luck fixing it.'));
   };
-
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;

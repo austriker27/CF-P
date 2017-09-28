@@ -27,7 +27,7 @@ var app = app || {};
   };
 
   Project.initIndexPage = function() {
-  projects.forEach(function(project){
+    Project.projects.forEach(function(project){
       $('.projectsAnchor').append(project.toHtml());
     });
   };
