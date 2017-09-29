@@ -15,13 +15,11 @@ var app = app || {};
       .then(callback);
   };
 
-  repos.with = attr => repos.all.filter(repo => repo[attr]);
-
   repos.renderRepos = function() {
     let sourceHTML = $('#repo-template').html();
     let actualTemplate = Handlebars.compile(sourceHTML);
     console.log(repos.all);
-    $('#about').append(repos.all.with('name').map(actualTemplate));
+    $('#about').append(repos.all.map(actualTemplate));
   };
 
   module.repos = repos;
