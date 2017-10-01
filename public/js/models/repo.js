@@ -7,16 +7,19 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.get('/github/user/repos',function (response) {
-      repos.all = response.map(function(repo) {
-        return repo;
-      }
-      );
+    $.get('/github/user/repos', function(data) {
+      repos.all = data;
+      callback();
     })
-      .then(callback,
-        err => console.error(err.status, err.statusText, 'is the broke stuff. Good luck fixing it.'));
+      .then(data => repos.all = data, err => console.error(err)) // es6 syntax arrow functions
+      .then(callback);
   };
 
-  repos.with = attr => repos.all.filter(repo => repo[attr]);
+  repos.renderRepos = function() {
+    let sourceHTML = $('#repo-template').html();
+    let actualTemplate = Handlebars.compile(sourceHTML);
+    $('#about').append(repos.all.map(actualTemplate));
+  };
+
   module.repos = repos;
 })(app);

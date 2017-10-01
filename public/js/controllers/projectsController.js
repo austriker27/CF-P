@@ -4,7 +4,7 @@ var app = app || {};
 (function(module) {
   const projectController = {};
   projectController.index = () => {
-    app.Project.fetchAll(app.projectView.initIndexPage);
+    app.Project.fetchAll(app.Project.initIndexPage);
 
     $('main > section').hide();
     $('.projectsAnchor').show();

@@ -1,23 +1,29 @@
 'use strict';
 var app = app || {};
 
-page('/', app.Project.initIndexPage );
+page('/', () => {
+  $('.sectionContent').hide();
+  $('#topBannerImg').fadeIn();
+  $('#bannerText').fadeIn();
+});
 
-page('/about', app.aboutController.index);
-page('/portfolio', app.projectsController.index);
+page('/about', () => {
+  app.repos.requestRepos(app.repos.renderRepos);
+  $('#mySkillsSection').hide();
+  $('#portfolio').hide();
+  $('#about').fadeIn();
+});
 
-//
-// page('/about', () => {
-//   $('.data-content').hide();
-//   $('#about').fadeIn();
-// });
-// page('/interests', () => {
-//   $('.data-content').hide();
-//   $('#interests').fadeIn();
-// });
-// page('/projects', () => {
-//   $('.data-content').hide();
-//   $('#projects').fadeIn();
-// });
+page('/interests', () => {
+  $('#about').hide();
+  $('#portfolio').hide();
+  $('#mySkillsSection').fadeIn();
+});
+
+page('/portfolio', () => {
+  $('#about').hide();
+  $('#mySkillsSection').hide();
+  $('#portfolio').fadeIn();
+});
 
 page();
