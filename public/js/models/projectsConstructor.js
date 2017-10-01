@@ -15,15 +15,14 @@ var app = app || {};
 
   Project.projects = [];
 
-  Project.prototype.toHtml = function() {
-    var sourceHTML = $('#project-template').html();
-    var actualTemplate = Handlebars.compile(sourceHTML);
-    var newRawHTML = actualTemplate(this);
-    return newRawHTML;
-  };
-
   Project.loadAll = rows => {
     Project.projects = Project.projects.map((projectObject) => new Project(projectObject));
+  };
+
+  Project.prototype.toHtml = function() {
+    let sourceHTML = $('#project-template').html();
+    let actualTemplate = Handlebars.compile(sourceHTML);
+    $('.projectsAnchor').append(Project.projects.map(actualTemplate));
   };
 
   Project.initIndexPage = function() {
@@ -34,11 +33,12 @@ var app = app || {};
 
   Project.fetchAll = function() {
     if (localStorage.projectsList) {
-      Project.loadAll(JSON.parse(localStorage.projectsList));
+      Project.prototype.toHtml(JSON.parse(localStorage.projectsList));
       Project.initIndexPage();
     } else {
       $.get('/data/projects.json', (response => {
         localStorage.setItem('projectsList', JSON.stringify(response));
+        console.log(response);
         Project.loadAll(response);
         Project.initIndexPage();
       })

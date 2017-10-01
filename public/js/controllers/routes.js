@@ -21,7 +21,6 @@ page('/interests', () => {
 });
 
 page('/portfolio', () => {
-  app.projectController.index();
   $('#about').hide();
   $('#mySkillsSection').hide();
   $('#portfolio').fadeIn();

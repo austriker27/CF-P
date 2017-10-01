@@ -36,7 +36,6 @@ APP.listen(PORT, function(){
 }
 );
 
-
 function proxyGitHub(req, res, next){
   (requestProxy({
     url: `https://api.github.com/${req.params[0]}`,
