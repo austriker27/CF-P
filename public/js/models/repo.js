@@ -7,10 +7,11 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.get('/github/user/repos', function (response) {
-      return repos.all = response;
-    }
-    )
+    $.get('/github/user/repos', function(data) {
+      repos.all = data;
+      callback();
+    })
+      .then(data => repos.all = data, err => console.error(err)) // es6 syntax arrow functions
       .then(callback);
   };
 
